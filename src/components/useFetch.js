@@ -1,4 +1,3 @@
-import React from 'react'
 import {db} from '../db/FbConfig';
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';

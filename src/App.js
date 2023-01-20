@@ -1,9 +1,7 @@
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Container from '@mui/material/Container';
-import Display from './components/Display';
-
+import Home from './pages/Home';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -11,10 +9,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <Container>
-        <Display />
-      </Container>
+      <Routes>
+        <Route path='/' element= {<Home />} />
+      </Routes>  
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React from 'react'
-import Cards from '../components/Cards'
-import useFetch from '../components/useFetch';
+import Display from '../components/Display'
+import Hero from '../components/Hero';
+import Container from '@mui/material/Container';
 
 const Home = () => {
-    const { data } = useFetch();
 
     return (
         <div className='home'>
-            <Cards cards = {data} />
+            <Hero />
+            <Container>
+                <Display />
+            </Container>    
         </div>
     )
 }

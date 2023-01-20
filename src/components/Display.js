@@ -1,14 +1,17 @@
 import React from 'react'
 import Grid from '@mui/material/Grid';
-import Home from '../pages/Home';
+import Cards from './Cards'
+import useFetch from './useFetch';
 
 
 const Display = () => {
+  const { data } = useFetch();
+
   return (
     <div>   
         <Grid container>
             <Grid item sm={12} lg={4}>
-                <Home />
+              <Cards cards = {data} />
             </Grid>
         </Grid>    
     </div>

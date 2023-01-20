@@ -5,7 +5,8 @@ const Hero = () => {
   
   return (
     <div style={{
-        backgroundColor: 'blue'
+        backgroundColor: 'blue',
+        
     }}>
       <h1>HERO</h1>
     </div>

@@ -1,3 +1,4 @@
+import React from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,7 +9,10 @@ import Typography from '@mui/material/Typography';
 const Cards = ( {cards}) => {
 
   return (
+   
+   
     <div className="CardTemplate">
+      
       {cards.map((cards) => ( 
 
         <Card sx={{ maxWidth: 345 }}>
