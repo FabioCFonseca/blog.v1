@@ -5,11 +5,12 @@ import useFetch from './useFetch';
 
 
 const Display = () => {
+
   const { data } = useFetch();
 
   return (
-    <div>   
-        <Grid container>
+    <div className='display'>   
+        <Grid>
             <Grid item sm={12} lg={4}>
               <Cards cards = {data} />
             </Grid>

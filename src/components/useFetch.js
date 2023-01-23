@@ -10,12 +10,14 @@ const useFetch = () => {
         const getInfo = async () => {
             const data = await getDocs(infoCollection) 
             setData(data.docs.map((doc) => ({...doc.data(), id: doc.id })))
+            
         };
-    
-        getInfo();
+        
+        getInfo(); 
       }, []);
-
+          
   return {data}
+   
 }
 
 export default useFetch

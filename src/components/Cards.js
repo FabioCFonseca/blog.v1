@@ -13,15 +13,16 @@ const Cards = ( {cards}) => {
    
     <div className="CardTemplate">
       
-      {cards.map((cards) => ( 
+      {cards.map((cards, i) => ( 
 
+        <div key={i}>
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
             image="/static/images/cards/contemplative-reptile.jpg"
             title="green iguana"
           />
-          <CardContent>
+          <CardContent >
             <Typography gutterBottom variant="h5" component="div">
               {cards.title}
             </Typography>
@@ -34,6 +35,7 @@ const Cards = ( {cards}) => {
               <Button size="small">Learn More</Button>
             </CardActions>
         </Card>
+        </div>
   ))}
     </div>
   )

@@ -4,10 +4,7 @@ const Hero = () => {
 
   
   return (
-    <div style={{
-        backgroundColor: 'blue',
-        
-    }}>
+    <div className='hero' style={{backgroundColor: '#E9FDF2',}}>
       <h1>HERO</h1>
     </div>
   )
