@@ -4,28 +4,23 @@ import useFetch from './useFetch';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+//import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 
-
 const Display = () => {
-
-const { data } = useFetch();
-let navigate = useNavigate();
+  const { data } = useFetch();
+  let navigate = useNavigate();
 
   return (
     <div className='display'>  
-    <Grid container>   
+    <Grid container spacing={10}>   
     {data.map((data) => (
-      <Grid item sm={3} md={3} lg={3} key={data.id}>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="green iguana"
-                />
+      <Grid item sm={4} md={4} lg={4} key={data.id}>
+      <Card variant="outlined" 
+        sx={{ maxWidth: 345,
+              maxHeight: 900 }}>
           <CardContent >
           <Typography gutterBottom variant="h5" component="div">
             {data.title}
@@ -35,10 +30,12 @@ let navigate = useNavigate();
           </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small" 
-                onClick={() => {
-                  navigate(`/articles/${data.id}`)}}  >Learn More</Button>
+            <Button
+              color="secondary"
+              variant='contained' size="small" 
+              onClick={() => {
+                navigate(`/articles/${data.id}`)}}
+            > Ler Artigo </Button>
           </CardActions>
         </Card>
       </Grid>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 .App {
   text-align: center;
 }
@@ -9,16 +11,40 @@
 
 :root {
   --primary: #E9FDF2
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .display {
   margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 .hero {
-  padding: 80px;
+  padding: 180px;
 }
 
-.cardTemplate {
-  margin: 0px;
+.title {
+  padding: 50px;
+  font-size: 20px
 }
+
+.author {
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 22px
+}
+
+.text {
+  margin-bottom: 200px;
+  text-align: left;
+  text-indent: 2rem;
+  line-height: 1.7;
+  font-size: 22px;
+  letter-spacing: 0.001rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+                                                     
