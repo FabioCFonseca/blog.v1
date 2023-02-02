@@ -23,9 +23,9 @@ const Display = () => {
         sx={{ maxWidth: 345,
               maxHeight: 900 }}>
           <CardMedia
-            component="img"
+            component="img" 
             sx={{ height: 300 }}
-            image={`/assets/images/${data.id}.jpg`}
+            src={`/assets/images/${data.id}.jpg`}
           />
           <CardContent >
           <Typography gutterBottom variant="h5" component="div">

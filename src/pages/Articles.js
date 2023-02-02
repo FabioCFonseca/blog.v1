@@ -24,28 +24,11 @@ const Articles = () => {
              <p>{item.author}</p>
            </div>
            <div className='text'>
-          
              { item.text }
-            
-           </div>
-           <div>
-           <p style={{ whiteSpace: 'pre' }}>jj  
-
-            f   f
-            kk
-           </p>
            </div>
          </div> 
        ))}
       </Container>
-      
-      <p className='uuu' >gggg
-
-
-        ggg
-        gg
-      </p>
-      
     </div>
   )
 }
