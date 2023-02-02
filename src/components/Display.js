@@ -4,10 +4,11 @@ import useFetch from './useFetch';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-//import CardMedia from '@mui/material/CardMedia';
+import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Display = () => {
   const { data } = useFetch();
@@ -21,9 +22,17 @@ const Display = () => {
       <Card variant="outlined" 
         sx={{ maxWidth: 345,
               maxHeight: 900 }}>
+          <CardMedia
+            component="img"
+            sx={{ height: 300 }}
+            image={`/assets/images/${data.id}.jpg`}
+          />
           <CardContent >
           <Typography gutterBottom variant="h5" component="div">
             {data.title}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            @{data.author}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {data.description}
