@@ -8,7 +8,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const Display = () => {
   const { data } = useFetch();

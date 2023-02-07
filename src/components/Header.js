@@ -1,25 +1,34 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
+import Container from '@mui/material/Container';
 
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-            <Typography align="left" variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: 20 }}>
-              <Link to='/' style={{ textDecoration: 'none' }}>Home</Link>
-            </Typography>
-            <Typography align="right" variant="h6" component="div" sx={{ flexGrow: 1, marginRight: 20 }}>
-              <Link to='/about' style={{ textDecoration: 'none' }}>About</Link>
-            </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div className='header'>
+      <Container>
+        <Link to='/' style={{ 
+          display:'flex', 
+          textDecoration:'none', 
+          itemAlign:'start',
+          marginTop: '50px',
+          fontSize: '72px',
+          fontWeight: 'bold',
+          color: '#000000'
+          }}>
+            SAPIÊNCIA</Link>
+      </Container>
+      <Container style={{ 
+          display: 'flex',
+          textDecoration: 'none',
+          justifyContent: 'space-between'
+          }}> 
+        <h3 style={{ color: 'grey' }}>Um blog sobre diversas áreas do conhecimento humâno</h3>   
+        <Link to='/about' style={{ textDecoration: 'none', color: 'grey' }}>About</Link>
+      </Container>
+      <Container>
+        <hr className='line'/>
+      </Container>
+    </div>
   );
 }

@@ -8,29 +8,25 @@ import { Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme ({
-  palette: {
-    primary: {
-      main: '#E9FDF2'
-    },
-    secondary: {
-      main: '#7FD1AE'
-    }
-  }
-})
+  typography: {
+    fontFamily: [
+      'Noto Serif Khojki',
+      'cursive',
+    ].join(','),
+  },});
 
 function App() {
 
-
   return (
     <div className="App">
+      <Header />
       <ThemeProvider theme={theme}>  
-        <Header />
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/about' element={<About />}/>
-            <Route path='/articles/:idurl' element={<Articles />}/>
-            <Route path='*' element={<ErrorPage />}/>
-          </Routes>    
+       <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/articles/:idurl' element={<Articles />}/>
+          <Route path='*' element={<ErrorPage />}/>
+        </Routes>    
       </ThemeProvider>    
      
     </div>

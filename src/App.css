@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@400;500;600&display=swap');
 
 .App {
   text-align: center;
@@ -12,8 +13,22 @@
 
 :root {
   --primary: #E9FDF2
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Serif Khojki', serif;
+}
 
+.header {
+  font-family: 'Noto Serif Khojki', serif;
+  padding: 0px;
+  color: black;
+}
+
+.line {
+  width: inherit;
+  height: 3px;
+  border: 0 none;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: lightgray;
 }
 
 .display {
