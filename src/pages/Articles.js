@@ -2,6 +2,8 @@ import React from 'react'
 import useFetch from '../components/useFetch';
 import { useParams } from 'react-router-dom';
 import Container from '@mui/material/Container';
+import Comments from '../components/Comments';
+
 
 
 const Articles = () => {
@@ -28,6 +30,7 @@ const Articles = () => {
            </div>
          </div> 
        ))}
+       < Comments />
       </Container>
     </div>
   )
